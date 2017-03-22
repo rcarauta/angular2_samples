@@ -2,8 +2,12 @@
   <label>
     <span>Seu nome completo</span>
     <input id="nome" type="text" name="nome" placeholder="seu nome" ngModel
-     minlength="2" required/>
+     #nome="ngModel" minlength="2" required/>
   </label>
+
+  <div *ngIf="nome.errors?.required && nome.touched" class="error">
+    O nome é obrigatório
+  </div>
 
   <label ngModelGroup="contato" #contatoUsuario="ngModelGroup">
     <span>Email: </span>
