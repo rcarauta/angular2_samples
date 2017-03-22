@@ -6,16 +6,18 @@ import {GiphyService} from './giphy/giphy.service';
 import {SharedModule} from './shared/shared.module';
 import {AppRoutingModule} from './app-routing.module';
 import {GiphyModule} from "./giphy/giphy.module";
+import {ContatoModule} from "./contato/contato.module";
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
   ],
   imports: [
     BrowserModule,
     SharedModule,
     AppRoutingModule,
-    GiphyModule
+    GiphyModule,
+    ContatoModule
   ],
   providers: [GiphyService],
   bootstrap: [AppComponent]

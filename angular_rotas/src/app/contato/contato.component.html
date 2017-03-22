@@ -1,0 +1,15 @@
+<form #f="ngForm" (ngSubmit)="enviarContato(f)">
+  <label>
+    <span>Seu nome completo</span>
+    <input id="nome" type="text" name="nome" placeholder="seu nome" ngModel
+     minlength="2" required/>
+  </label>
+
+  <label ngModelGroup="contato" #contatoUsuario="ngModelGroup">
+    <span>Email: </span>
+    <input type="text" placeholder="Digite seu e-mail aqui..." name="email"
+    ngModel required />
+  </label>
+
+  <button type="submit" [disabled]="f.invalid">Sing up</button>
+</form>
