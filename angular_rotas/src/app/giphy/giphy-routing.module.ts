@@ -6,6 +6,7 @@ import {GiphyComponent} from "./giphy.component";
   imports:[
     RouterModule.forChild([
       {path: 'giphy', component: GiphyComponent}
+      {path: 'giphy/:id', component: GiphyComponent}
     ])
   ],
   exports: [RouterModule]
