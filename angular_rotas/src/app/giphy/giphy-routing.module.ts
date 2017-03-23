@@ -5,7 +5,7 @@ import {GiphyComponent} from "./giphy.component";
 @NgModule({
   imports:[
     RouterModule.forChild([
-      {path: 'giphy', component: GiphyComponent}
+      {path: 'giphy', component: GiphyComponent},
       {path: 'giphy/:id', component: GiphyComponent}
     ])
   ],

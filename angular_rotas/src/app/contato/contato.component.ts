@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { NgForm } from '@angular/forms';
+import {ContatoServiceService} from "./contato-service.service";
 
 
 @Component({
@@ -9,7 +10,7 @@ import { NgForm } from '@angular/forms';
 })
 export class ContatoComponent implements OnInit {
 
-  constructor() { }
+  constructor(private contatoService: ContatoServiceService) { }
 
   ngOnInit() {
   }
@@ -18,6 +19,11 @@ export class ContatoComponent implements OnInit {
 
   enviarContato(contatoForm: NgForm) {
     console.log(contatoForm.value);
+
+    this.contatoService.enviarContato(contatoForm.value).subscribe(
+      (response) =>
+      console.log("response ",response)
+    )
   }
 
 }
